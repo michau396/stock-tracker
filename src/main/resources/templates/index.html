@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .google-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            background: white;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .google-btn:hover {
+            background: #f8f9fa;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Tracker</h1>
+        <p>Sign in with your Google account to track your stock portfolio</p>
+        
+        <a href="/oauth2/authorization/google" class="google-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" style="margin-right: 12px;">
+                <path d="M19.6 10.23c0-.82-.1-1.42-.25-2.05H10v3.91h5.56c-.15.96-.74 2.31-2.04 3.22v2.45h3.16c1.89-1.73 2.98-4.3 2.98-7.53z" fill="#4285F4"/>
+                <path d="M10 20c2.7 0 4.96-.89 6.62-2.42l-3.16-2.45c-.89.6-2.03.95-3.46.95-2.68 0-4.95-1.81-5.76-4.25H.91v2.52C2.56 17.73 6.02 20 10 20z" fill="#34A853"/>
+                <path d="M4.24 9.83c-.2-.6-.3-1.25-.3-1.91 0-.66.1-1.31.3-1.91V3.16H.91C.33 4.31 0 5.63 0 7.09c0 1.46.33 2.78.91 3.93l3.33-2.19z" fill="#FBBC05"/>
+                <path d="M10 3.95c1.52 0 2.87.52 3.94 1.57l2.84-2.84C14.96.89 12.7 0 10 0 6.02 0 2.56 2.27.91 5.64l3.33 2.31c.81-2.44 3.08-4.25 5.76-4.25z" fill="#EA4335"/>
+            </svg>
+            Sign in with Google
+        </a>
+    </div>
+</body>
+</html>
